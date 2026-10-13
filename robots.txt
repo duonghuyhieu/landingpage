@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://huyhieu.online/sitemap.xml
+Sitemap: https://hhlab.huyhieu.online/sitemap.xml
