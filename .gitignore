@@ -1,0 +1,11 @@
+# Vercel CLI link data
+.vercel/
+
+# Local tooling output
+.playwright-mcp/
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

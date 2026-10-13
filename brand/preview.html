@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HH Labs — Logo</title>
+<link rel="icon" href="logo/favicon.svg" type="image/svg+xml">
+<style>
+  :root { --ink: #15131A; --cream: #FFF7EA; --blue: #3D5AFE; --yellow: #FFD23F; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--cream); color: var(--ink); }
+  header, section { max-width: 1120px; margin: 0 auto; padding: 32px 20px; }
+  h1 { font-size: 28px; margin: 0 0 6px; }
+  h2 { font-size: 15px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 14px; color: #5E5867; }
+  p { margin: 0; color: #5E5867; }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .tile { border: 2px solid var(--ink); border-radius: 20px; min-height: 200px; display: grid; place-items: center; padding: 28px; position: relative; }
+  .tile small { position: absolute; left: 14px; bottom: 10px; font-size: 12px; opacity: .6; }
+  .light { background: #fff; } .cream { background: var(--cream); } .dark { background: #121019; color: #F4F1FA; }
+  .blue { background: var(--blue); color: #fff; } .yellow { background: var(--yellow); }
+  .tile img { max-width: 100%; height: auto; }
+  .sizes { display: flex; align-items: flex-end; gap: 28px; flex-wrap: wrap; }
+  .mono-ink { color: var(--ink); } .mono-white { color: #fff; }
+  .mono svg { width: 260px; height: auto; }
+  .swatches { display: flex; flex-wrap: wrap; gap: 12px; }
+  .sw { width: 150px; border: 2px solid var(--ink); border-radius: 16px; overflow: hidden; background: #fff; font-size: 13px; }
+  .sw i { display: block; height: 70px; }
+  .sw div { padding: 8px 10px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>HH Labs — Logo</h1>
+  <p>Bong bóng hội thoại (AI trò chuyện) chứa chữ “HH” liền nét, hai thanh ngang lệch nhau như bậc thang đi lên, kèm tia sáng ✦ tượng trưng cho AI.</p>
+</header>
+
+<section>
+  <h2>Logo ngang</h2>
+  <div class="grid">
+    <div class="tile cream"><img src="logo/hh-labs-logo-horizontal.svg" width="340" alt="Logo ngang trên nền kem"><small>Nền sáng</small></div>
+    <div class="tile dark"><img src="logo/hh-labs-logo-horizontal-dark.svg" width="340" alt="Logo ngang trên nền tối"><small>Nền tối</small></div>
+    <div class="tile light"><img src="logo/hh-labs-logo-horizontal.svg" width="340" alt="Logo ngang trên nền trắng"><small>Nền trắng</small></div>
+    <div class="tile yellow"><img src="logo/hh-labs-logo-horizontal.svg" width="340" alt="Logo ngang trên nền vàng"><small>Nền màu thương hiệu</small></div>
+  </div>
+</section>
+
+<section>
+  <h2>Logo dọc &amp; biểu tượng</h2>
+  <div class="grid">
+    <div class="tile cream"><img src="logo/hh-labs-logo-stacked.svg" width="220" alt="Logo dọc"><small>Logo dọc</small></div>
+    <div class="tile dark"><img src="logo/hh-labs-logo-stacked-dark.svg" width="220" alt="Logo dọc nền tối"><small>Logo dọc — nền tối</small></div>
+    <div class="tile light"><img src="logo/hh-labs-app-icon.svg" width="180" alt="App icon" style="border-radius:40px;border:2px solid var(--ink)"><small>App icon / avatar</small></div>
+  </div>
+</section>
+
+<section>
+  <h2>Một màu (in ấn, khắc, dập nổi)</h2>
+  <div class="grid">
+    <div class="tile light mono mono-ink" id="mono-ink"><small>Đen</small></div>
+    <div class="tile blue mono mono-white" id="mono-white"><small>Trắng trên nền màu</small></div>
+  </div>
+</section>
+
+<section>
+  <h2>Kích thước nhỏ</h2>
+  <div class="tile cream">
+    <div class="sizes">
+      <img src="logo/hh-labs-mark.svg" width="128" alt="128px">
+      <img src="logo/hh-labs-mark.svg" width="64" alt="64px">
+      <img src="logo/hh-labs-mark.svg" width="40" alt="40px">
+      <img src="logo/favicon.svg" width="32" alt="32px">
+      <img src="logo/favicon.svg" width="16" alt="16px">
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Màu thương hiệu</h2>
+  <div class="swatches">
+    <div class="sw"><i style="background:#3D5AFE"></i><div><b>Electric Blue</b><br>#3D5AFE</div></div>
+    <div class="sw"><i style="background:#FFD23F"></i><div><b>Sunny Yellow</b><br>#FFD23F</div></div>
+    <div class="sw"><i style="background:#15131A"></i><div><b>Ink</b><br>#15131A</div></div>
+    <div class="sw"><i style="background:#FFF7EA"></i><div><b>Cream</b><br>#FFF7EA</div></div>
+    <div class="sw"><i style="background:#FF6B4A"></i><div><b>Coral</b><br>#FF6B4A</div></div>
+    <div class="sw"><i style="background:#2ED6A1"></i><div><b>Mint</b><br>#2ED6A1</div></div>
+    <div class="sw"><i style="background:#B69CFF"></i><div><b>Lilac</b><br>#B69CFF</div></div>
+  </div>
+</section>
+
+<script>
+  // Inline the mono SVG so it inherits the tile's text colour (currentColor)
+  fetch('logo/hh-labs-logo-horizontal-mono.svg').then(r => r.text()).then(svg => {
+    document.getElementById('mono-ink').insertAdjacentHTML('afterbegin', svg);
+    document.getElementById('mono-white').insertAdjacentHTML('afterbegin', svg.replace('id="hhk"', 'id="hhk2"').replace('url(#hhk)', 'url(#hhk2)'));
+  }).catch(() => {});
+</script>
+</body>
+</html>

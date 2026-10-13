@@ -1,0 +1,6 @@
+Đây là dự án hát karaoke bao gồm 2 thiết bị
+- Màn hình
+- Điều khiển
+Đi từ màn hình xong dùng điện thoại quét qr để làm điều khiển có thể chọn bài
+Có tính năng sử dụng AI gợi ý các bài hát đã chọn hay thực hiện các hành vi như next bài, giảm âm lượng ....
+Trang web ở kara.huyhieu.online

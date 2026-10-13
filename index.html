@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HH Labs — AI solutions startup in Hanoi</title>
+  <meta name="description" content="HH Labs is a Hanoi-based tech startup providing AI integration solutions and building AI-powered products: Badminton Fund, HATZ Karaoke and NekoGo.">
+  <meta name="theme-color" content="#FFF7EA">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="HH Labs — We turn AI into experiences people love">
+  <meta property="og:description" content="AI integration solutions &amp; AI-powered products, made in Hanoi.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="HH Labs">
+  <meta property="og:url" content="https://huyhieu.online/">
+  <meta property="og:image" content="https://huyhieu.online/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="HH Labs logo">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://huyhieu.online/">
+  <link rel="alternate" hreflang="en" href="https://huyhieu.online/">
+  <link rel="alternate" hreflang="vi" href="https://huyhieu.online/?lang=vi">
+  <link rel="alternate" hreflang="ja" href="https://huyhieu.online/?lang=ja">
+  <link rel="alternate" hreflang="ko" href="https://huyhieu.online/?lang=ko">
+  <link rel="alternate" hreflang="zh" href="https://huyhieu.online/?lang=zh">
+  <link rel="alternate" hreflang="x-default" href="https://huyhieu.online/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <!-- Theme + language decided before first paint to avoid flashes -->
+  <script>
+    (function () {
+      var d = document.documentElement, ls = null;
+      d.classList.add('js');
+      try { ls = window.localStorage; } catch (e) {}
+      var theme = null;
+      try { theme = ls && ls.getItem('hh-theme'); } catch (e) {}
+      if (theme !== 'light' && theme !== 'dark') {
+        theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      d.setAttribute('data-theme', theme);
+      var lang = null;
+      try { lang = new URLSearchParams(location.search).get('lang') || (ls && ls.getItem('hh-lang')); } catch (e) {}
+      if (lang && lang !== 'en' && /^(vi|ja|ko|zh)$/.test(lang)) {
+        d.classList.add('lang-pending');
+        setTimeout(function () { d.classList.remove('lang-pending'); }, 1500);
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HH Labs",
+    "description": "AI startup providing AI integration solutions and building AI-powered products.",
+    "email": "contact@huyhieu.online",
+    "telephone": "+84365965931",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "263 Phúc Diễn",
+      "addressLocality": "Xuân Phương",
+      "addressRegion": "Hà Nội",
+      "addressCountry": "VN"
+    }
+  }
+  </script>
+</head>
+<body data-scene="paper">
+
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="brand" aria-label="HH Labs">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M20 4H40A16 16 0 0 1 56 20V36A16 16 0 0 1 40 52H28.5L13.5 61Q14.6 56 14.5 51A16 16 0 0 1 4 36V20A16 16 0 0 1 20 4Z" transform="translate(3 3)" fill="#15131A"/>
+        <path d="M20 4H40A16 16 0 0 1 56 20V36A16 16 0 0 1 40 52H28.5L13.5 61Q14.6 56 14.5 51A16 16 0 0 1 4 36V20A16 16 0 0 1 20 4Z" fill="#3D5AFE" stroke="#15131A" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M19 17V39M30 17V39M41 17V39M19 24H30M30 32H41" fill="none" stroke="#fff" stroke-width="5.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="brand__spark" d="M52 0.8Q53.6 8.4 61.2 10Q53.6 11.6 52 19.2Q50.4 11.6 42.8 10Q50.4 8.4 52 0.8Z" fill="#FFD23F" stroke="#15131A" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand__name">HH&nbsp;Labs</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Menu">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#products" data-i18n="nav.products">Products</a>
+      <a href="#process" data-i18n="nav.process">Process</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="nav__tools">
+      <div class="lang" id="lang">
+        <button class="icon-btn lang__btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" data-i18n-aria="aria.lang" aria-label="Choose language">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+          <span class="lang__cur">EN</span>
+        </button>
+        <ul class="lang__menu" id="lang-menu" hidden>
+          <li><button data-lang="en" lang="en">🇬🇧 English</button></li>
+          <li><button data-lang="vi" lang="vi">🇻🇳 Tiếng Việt</button></li>
+          <li><button data-lang="ja" lang="ja">🇯🇵 日本語</button></li>
+          <li><button data-lang="ko" lang="ko">🇰🇷 한국어</button></li>
+          <li><button data-lang="zh" lang="zh">🇨🇳 中文</button></li>
+        </ul>
+      </div>
+
+      <button class="icon-btn theme-toggle" id="theme-toggle" data-i18n-aria="aria.theme" aria-label="Toggle light / dark theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 019.5 4a8.5 8.5 0 1010.5 10.5z"/></svg>
+      </button>
+
+      <a href="#contact" class="btn btn--dark btn--sm nav__cta" data-magnetic>
+        <span data-i18n="nav.cta">Start a project</span> <span class="btn__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <button class="icon-btn nav__toggle" aria-expanded="false" aria-controls="mobile-menu" data-i18n-aria="aria.menu" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Menu">
+      <a href="#about"><i>01</i><span data-i18n="nav.about">About</span></a>
+      <a href="#services"><i>02</i><span data-i18n="nav.services">Services</span></a>
+      <a href="#products"><i>03</i><span data-i18n="nav.products">Products</span></a>
+      <a href="#process"><i>04</i><span data-i18n="nav.process">Process</span></a>
+      <a href="#contact"><i>05</i><span data-i18n="nav.contact">Contact</span></a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <a href="mailto:contact@huyhieu.online">contact@huyhieu.online</a>
+      <a href="tel:+84365965931">0365 965 931</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" data-scene="paper">
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+
+      <div class="shapes" aria-hidden="true">
+        <svg class="shape shape--star" data-depth="1.4" viewBox="0 0 100 100"><path d="M50 2l9 25 26-9-13 24 24 13-27 4 4 27-23-15-23 15 4-27-27-4 24-13-13-24 26 9z" fill="#FFD23F" stroke="#15131A" stroke-width="3" stroke-linejoin="round"/></svg>
+        <svg class="shape shape--blob" data-depth="0.7" viewBox="0 0 100 100"><path d="M74 14c14 10 22 30 16 48s-26 32-46 30S8 76 6 56 18 16 36 9s24-5 38 5z" fill="#B69CFF"/></svg>
+        <svg class="shape shape--squiggle" data-depth="1.1" viewBox="0 0 140 40"><path d="M4 26c12-18 22-18 32 0s20 18 32 0 22-18 32 0 20 18 32 0" fill="none" stroke="#FF6B4A" stroke-width="7" stroke-linecap="round"/></svg>
+        <svg class="shape shape--pill" data-depth="1.8" viewBox="0 0 120 50"><rect x="3" y="3" width="114" height="44" rx="22" fill="#2ED6A1" stroke="#15131A" stroke-width="3"/><circle cx="28" cy="25" r="8" fill="#15131A"/></svg>
+        <svg class="shape shape--flower" data-depth="0.9" viewBox="0 0 100 100"><g fill="#FF8FC7"><circle cx="50" cy="26" r="22"/><circle cx="74" cy="50" r="22"/><circle cx="50" cy="74" r="22"/><circle cx="26" cy="50" r="22"/></g><circle cx="50" cy="50" r="12" fill="#FFD23F"/></svg>
+        <svg class="shape shape--ring" data-depth="1.6" viewBox="0 0 100 100"><circle cx="50" cy="50" r="36" fill="none" stroke="#3D5AFE" stroke-width="14" stroke-dasharray="2 18" stroke-linecap="round"/></svg>
+      </div>
+
+      <div class="hero__inner container">
+        <div class="hero__text">
+          <p class="hello reveal">
+            <span class="hello__dot" aria-hidden="true"></span>
+            <span data-i18n="hero.hello">AI startup · Hanoi, Vietnam</span>
+          </p>
+
+          <h1 class="hero__title">
+            <span class="line"><span data-i18n="hero.l1">We turn AI into</span></span>
+            <span class="line"><span data-i18n="hero.l2"><mark class="pill">experiences</mark></span></span>
+            <span class="line"><span data-i18n="hero.l3">people <span class="scribble">love</span>.</span></span>
+          </h1>
+
+          <p class="hero__lead reveal" data-i18n="hero.lead">HH Labs provides <strong>AI integration solutions</strong> and builds <strong>AI-powered products</strong> — bringing artificial intelligence into everyday moments: group funds, karaoke nights and even games of Go.</p>
+
+          <div class="hero__actions reveal">
+            <a href="#products" class="btn btn--blue" data-magnetic><span data-i18n="hero.cta1">See our products</span> <span class="btn__arrow" aria-hidden="true">↓</span></a>
+            <a href="#contact" class="btn btn--outline" data-magnetic><span data-i18n="hero.cta2">Talk to HH Labs</span></a>
+          </div>
+        </div>
+
+        <div class="collage" aria-hidden="true">
+          <figure class="sticker sticker--a" data-depth="0.5">
+            <img src="assets/img/badminton-dashboard.webp" alt="" width="1800" height="1012">
+            <figcaption class="tag tag--yellow" data-i18n="hero.tag1">✦ Teppy assistant</figcaption>
+          </figure>
+          <figure class="sticker sticker--b" data-depth="0.9">
+            <img src="assets/img/kara-song.webp" alt="" width="1800" height="1003">
+            <figcaption class="tag tag--mint" data-i18n="hero.tag2">🎤 Scan QR &amp; sing</figcaption>
+          </figure>
+          <figure class="sticker sticker--c" data-depth="1.3">
+            <img src="assets/img/nekogo-play.webp" alt="" width="720" height="1381">
+            <figcaption class="tag tag--pink" data-i18n="hero.tag3">🐾 Meow~</figcaption>
+          </figure>
+          <div class="badge" data-depth="1.6">
+            <svg viewBox="0 0 200 200">
+              <defs><path id="circlePath" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+              <text><textPath href="#circlePath">HH LABS ✦ AI STUDIO ✦ MADE IN HÀ NỘI ✦ </textPath></text>
+            </svg>
+            <span class="badge__core">AI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__stats container">
+        <div class="stat stat--yellow reveal"><b>03</b><span data-i18n="hero.stat1">AI products<br>live in production</span></div>
+        <div class="stat stat--mint reveal"><b>VI</b><span data-i18n="hero.stat2">assistants that<br>speak Vietnamese</span></div>
+        <div class="stat stat--lilac reveal"><b>HN</b><span data-i18n="hero.stat3">made in<br>Hanoi</span></div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="tapes" aria-hidden="true">
+      <div class="tape tape--back"></div>
+      <div class="marquee">
+        <div class="marquee__track">
+          <span data-i18n="mq.1">AI integration</span><b>✦</b><span data-i18n="mq.2">Conversational assistants</span><b>✦</b><span>Web App</span><b>✦</b><span data-i18n="mq.3">Natural-language commands</span><b>✦</b><span data-i18n="mq.4">Education</span><b>✦</b><span data-i18n="mq.5">Entertainment</span><b>✦</b><span data-i18n="mq.6">Finance</span><b>✦</b>
+          <span data-i18n="mq.1">AI integration</span><b>✦</b><span data-i18n="mq.2">Conversational assistants</span><b>✦</b><span>Web App</span><b>✦</b><span data-i18n="mq.3">Natural-language commands</span><b>✦</b><span data-i18n="mq.4">Education</span><b>✦</b><span data-i18n="mq.5">Entertainment</span><b>✦</b><span data-i18n="mq.6">Finance</span><b>✦</b>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about" data-scene="paper">
+      <div class="container">
+        <div class="section-label reveal"><b>01</b><span data-i18n="about.label">About HH Labs</span></div>
+
+        <p class="manifesto" data-words data-i18n="about.manifesto">We believe AI shouldn't be a luxury. It should be <em>a friendly companion</em> — answering questions about your group's shared fund, picking songs for the party, or patiently teaching you your very first moves on the board.</p>
+
+        <div class="about__grid">
+          <div class="about__card about__card--yellow reveal">
+            <span class="about__icon" aria-hidden="true">🎯</span>
+            <h3 data-i18n="about.c1.t">Mission</h3>
+            <p data-i18n="about.c1.p">Turning modern AI models into practical, easy-to-use tools for individuals, communities and businesses in Vietnam.</p>
+          </div>
+          <div class="about__card about__card--mint reveal">
+            <span class="about__icon" aria-hidden="true">🧭</span>
+            <h3 data-i18n="about.c2.t">Approach</h3>
+            <p data-i18n="about.c2.p">We start from the user experience, then choose the technology. AI has to solve the right problem — not decorate it.</p>
+          </div>
+          <div class="about__card about__card--lilac reveal">
+            <span class="about__icon" aria-hidden="true">🚀</span>
+            <h3 data-i18n="about.c3.t">Commitment</h3>
+            <p data-i18n="about.c3.p">Real products with real users. Every project we ship is operated and improved continuously.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section services" id="services" data-scene="paper">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label reveal"><b>02</b><span data-i18n="services.label">Services</span></div>
+          <h2 class="display reveal" data-i18n="services.title">What can we <em>build</em> for you?</h2>
+        </div>
+
+        <div class="bento">
+          <article class="service service--blue reveal">
+            <div class="service__top">
+              <span class="service__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><rect x="6" y="10" width="36" height="26" rx="5"/><path d="M6 18h36M16 42h16M24 36v6"/><circle cx="33" cy="27" r="4"/></svg>
+              </span>
+              <span class="service__no">01</span>
+            </div>
+            <h3 data-i18n="s1.t">AI integration for existing systems</h3>
+            <p data-i18n="s1.p">Connect large language models to your current data and workflows: data Q&amp;A chatbots, automation of repetitive tasks, smart search.</p>
+            <ul class="tags"><li>LLM</li><li>RAG</li><li>API</li></ul>
+          </article>
+
+          <article class="service service--yellow reveal">
+            <div class="service__top">
+              <span class="service__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M24 4l4.5 10.5L39 19l-10.5 4.5L24 34l-4.5-10.5L9 19l10.5-4.5z"/><path d="M38 32l1.8 4.2L44 38l-4.2 1.8L38 44l-1.8-4.2L32 38l4.2-1.8z"/></svg>
+              </span>
+              <span class="service__no">02</span>
+            </div>
+            <h3 data-i18n="s2.t">End-to-end AI product development</h3>
+            <p data-i18n="s2.p">From idea and UI/UX design to web app development, deployment and operations — with you across the whole product lifecycle.</p>
+            <ul class="tags"><li>UI/UX</li><li>Web App</li><li>Cloud</li></ul>
+          </article>
+
+          <article class="service service--coral reveal">
+            <div class="service__top">
+              <span class="service__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M8 10h26a4 4 0 014 4v14a4 4 0 01-4 4H20l-8 7v-7H8a4 4 0 01-4-4V14a4 4 0 014-4z"/><path d="M12 19h18M12 24h11"/></svg>
+              </span>
+              <span class="service__no">03</span>
+            </div>
+            <h3 data-i18n="s3.t">Conversational assistants &amp; AI agents</h3>
+            <p data-i18n="s3.p">Assistants that understand natural Vietnamese and don't just answer but <b>take action</b>: look up numbers, control devices, recommend the right content.</p>
+            <ul class="tags"><li>Agent</li><li>Tool calling</li><li data-i18n="s3.tag">Vietnamese</li></ul>
+          </article>
+
+          <article class="service service--mint reveal">
+            <div class="service__top">
+              <span class="service__icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><circle cx="20" cy="20" r="13"/><path d="M29.5 29.5L42 42"/><path d="M14 21l4 4 8-9"/></svg>
+              </span>
+              <span class="service__no">04</span>
+            </div>
+            <h3 data-i18n="s4.t">Consulting &amp; partnership</h3>
+            <p data-i18n="s4.p">Assess the problem, pick the right model, estimate and optimise running costs — so AI delivers real value.</p>
+            <ul class="tags"><li data-i18n="s4.tag1">Strategy</li><li>PoC</li><li data-i18n="s4.tag2">Cost optimisation</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCTS INTRO ============ -->
+    <section class="section products-intro" id="products" data-scene="paper">
+      <div class="container">
+        <div class="section-label reveal"><b>03</b><span data-i18n="products.label">Products</span></div>
+        <h2 class="display display--xl reveal" data-i18n="products.title">Three playgrounds,<br><em>one</em> joy.</h2>
+        <p class="products-intro__lead reveal" data-i18n="products.lead">Each product is an experiment in how AI can blend into everyday life. All of them are live — click through and try them now!</p>
+        <ol class="product-index">
+          <li class="reveal"><a href="#p-caulong"><span class="dot dot--blue"></span><span data-i18n="p1.name">Badminton Fund</span><i data-i18n="pi.1">Group finance</i><b aria-hidden="true">→</b></a></li>
+          <li class="reveal"><a href="#p-hatz"><span class="dot dot--coral"></span>HATZ Karaoke<i data-i18n="pi.2">Entertainment</i><b aria-hidden="true">→</b></a></li>
+          <li class="reveal"><a href="#p-nekogo"><span class="dot dot--pink"></span>NekoGo<i data-i18n="pi.3">Education</i><b aria-hidden="true">→</b></a></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCT 01 — QUỸ CẦU LÔNG ============ -->
+    <section class="section product" id="p-caulong" data-scene="court">
+      <div class="container">
+        <header class="product__head">
+          <span class="product__num" aria-hidden="true">01</span>
+          <div>
+            <p class="product__cat reveal" data-i18n="p1.cat">Group finance · Web app</p>
+            <h2 class="product__name reveal"><span data-i18n="p1.name">Badminton Fund</span> <span class="emoji" aria-hidden="true">🏸</span></h2>
+            <p class="product__tagline reveal" data-i18n="p1.tagline">A ledger that talks back.</p>
+          </div>
+        </header>
+
+        <div class="product__grid">
+          <div class="product__info">
+            <p class="product__desc reveal" data-i18n="p1.desc">A fund-management platform for badminton groups: track players, sessions, cash flow and budgets in one place. The treasurer no longer digs through spreadsheets — just ask the AI assistant.</p>
+
+            <ul class="features reveal">
+              <li><b data-i18n="p1.f1b">Members</b><span data-i18n="p1.f1s">Profile, status and balance for every player</span></li>
+              <li><b data-i18n="p1.f2b">Sessions</b><span data-i18n="p1.f2s">Log each session and deduct costs automatically</span></li>
+              <li><b data-i18n="p1.f3b">Ledger</b><span data-i18n="p1.f3s">Transparent income &amp; expense history, instant lookup</span></li>
+              <li><b data-i18n="p1.f4b">Budget</b><span data-i18n="p1.f4s">Allocate court and shuttlecock costs by category</span></li>
+            </ul>
+
+            <div class="ai-box reveal">
+              <p class="ai-box__label"><span class="spark">✦</span> <span data-i18n="p1.ai.label">AI inside — the <b>Teppy</b> assistant</span></p>
+              <p class="ai-box__text" data-i18n="p1.ai.text">Ask in plain Vietnamese, get answers from your real fund data:</p>
+              <ul class="prompts">
+                <li data-i18n="p1.q1">“How much is left in the fund?”</li>
+                <li data-i18n="p1.q2">“How much did the last session cost?”</li>
+                <li data-i18n="p1.q3">“Who owes the fund the most?”</li>
+              </ul>
+            </div>
+
+            <div class="demo-account reveal">
+              <p class="demo-account__title">🔑 <span data-i18n="demo.title">Demo account</span></p>
+              <div class="demo-account__row">
+                <span data-i18n="demo.user">Username</span><code>hieu.duong</code>
+                <button class="copy" data-copy="hieu.duong" data-i18n="js.copy">Copy</button>
+              </div>
+              <div class="demo-account__row">
+                <span data-i18n="demo.pass">Password</span><code>admin123</code>
+                <button class="copy" data-copy="admin123" data-i18n="js.copy">Copy</button>
+              </div>
+            </div>
+
+            <a href="https://caulong.huyhieu.online" target="_blank" rel="noopener" class="btn btn--accent reveal" data-magnetic>
+              <span data-i18n="btn.try">Try it at</span> caulong.huyhieu.online <span class="btn__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="product__visual reveal">
+            <span class="float-tag float-tag--tr tag tag--yellow" aria-hidden="true" data-i18n="p1.float">Ask me anything ✦</span>
+            <div class="browser" data-tilt>
+              <div class="browser__bar">
+                <i></i><i></i><i></i>
+                <span class="browser__url">caulong.huyhieu.online</span>
+              </div>
+              <div class="browser__screen screen-swap" id="caulong-screen">
+                <img src="assets/img/badminton-dashboard.webp" alt="Badminton Fund dashboard" width="1800" height="1012" class="is-active" data-zoom>
+                <img src="assets/img/badminton-member.webp" alt="Member management" width="1800" height="1017" loading="lazy" data-zoom>
+                <img src="assets/img/badminton-fund.webp" alt="Fund ledger" width="1800" height="1005" loading="lazy" data-zoom>
+                <img src="assets/img/badminton-budget.webp" alt="Budget" width="1800" height="1004" loading="lazy" data-zoom>
+              </div>
+            </div>
+
+            <figure class="chat-float" data-tilt>
+              <img src="assets/img/badminton-ai.webp" alt="Teppy, the AI fund assistant" width="720" height="1045" loading="lazy" data-zoom>
+            </figure>
+
+            <div class="tabs" role="tablist" aria-label="Quỹ Cầu Lông" data-target="caulong-screen">
+              <button role="tab" aria-selected="true" data-i18n="p1.t1">Overview</button>
+              <button role="tab" aria-selected="false" data-i18n="p1.f1b">Members</button>
+              <button role="tab" aria-selected="false" data-i18n="p1.f3b">Ledger</button>
+              <button role="tab" aria-selected="false" data-i18n="p1.f4b">Budget</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCT 02 — HATZ KARAOKE ============ -->
+    <section class="section product product--reverse" id="p-hatz" data-scene="night">
+      <div class="glow glow--a" aria-hidden="true"></div>
+      <div class="glow glow--b" aria-hidden="true"></div>
+      <div class="notes" aria-hidden="true">
+        <span style="--x:8%;--y:14%;--d:0s">♪</span>
+        <span style="--x:46%;--y:8%;--d:-1.5s">♫</span>
+        <span style="--x:90%;--y:20%;--d:-3s">♪</span>
+        <span style="--x:4%;--y:78%;--d:-2s">♬</span>
+        <span style="--x:94%;--y:86%;--d:-4s">♫</span>
+      </div>
+      <div class="container">
+        <header class="product__head">
+          <span class="product__num" aria-hidden="true">02</span>
+          <div>
+            <p class="product__cat reveal" data-i18n="p2.cat">Entertainment · Multi-device</p>
+            <h2 class="product__name reveal">HATZ Karaoke <span class="emoji" aria-hidden="true">🎤</span></h2>
+            <p class="product__tagline reveal" data-i18n="p2.tagline">One screen. Every phone becomes a remote.</p>
+          </div>
+        </header>
+
+        <div class="product__grid">
+          <div class="product__info">
+            <p class="product__desc reveal" data-i18n="p2.desc">An online karaoke system with two devices: the <b>main screen</b> plays the music and your <b>phone</b> becomes the remote. No app to install, no complicated pairing.</p>
+
+            <ol class="steps reveal">
+              <li>
+                <span class="steps__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32"><rect x="3" y="5" width="26" height="17" rx="2"/><path d="M11 27h10M16 22v5"/></svg>
+                </span>
+                <b data-i18n="p2.s1b">Open the screen</b><span data-i18n="p2.s1s">Create a room on a TV or laptop</span>
+              </li>
+              <li>
+                <span class="steps__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32"><path d="M4 10V4h6M22 4h6v6M28 22v6h-6M10 28H4v-6"/><rect x="10" y="10" width="5" height="5"/><rect x="17" y="17" width="5" height="5"/><path d="M17 10h5v4M10 17v5h4"/></svg>
+                </span>
+                <b data-i18n="p2.s2b">Scan the QR code</b><span data-i18n="p2.s2s">Phones join the room instantly</span>
+              </li>
+              <li>
+                <span class="steps__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32"><rect x="9" y="3" width="14" height="26" rx="3"/><path d="M14 25h4"/><path d="M14 11l5 3-5 3z"/></svg>
+                </span>
+                <b data-i18n="p2.s3b">Control</b><span data-i18n="p2.s3s">Pick songs, play, skip, adjust volume</span>
+              </li>
+            </ol>
+
+            <div class="ai-box reveal">
+              <p class="ai-box__label"><span class="spark">✦</span> <span data-i18n="p2.ai.label">AI inside — the <b>Karaoke Assistant</b></span></p>
+              <p class="ai-box__text" data-i18n="p2.ai.text">Suggests songs for your mood and carries out actions from natural commands:</p>
+              <ul class="prompts">
+                <li data-i18n="p2.q1">“Hype remix, max energy”</li>
+                <li data-i18n="p2.q2">“Skip to the next song”</li>
+                <li data-i18n="p2.q3">“Turn the volume down”</li>
+              </ul>
+            </div>
+
+            <a href="https://kara.huyhieu.online" target="_blank" rel="noopener" class="btn btn--accent reveal" data-magnetic>
+              <span data-i18n="btn.try">Try it at</span> kara.huyhieu.online <span class="btn__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="product__visual product__visual--hatz reveal">
+            <span class="float-tag float-tag--tl tag tag--mint" aria-hidden="true" data-i18n="p2.float">Scan &amp; sing! 🎶</span>
+            <div class="browser browser--dark" data-tilt>
+              <div class="browser__bar">
+                <i></i><i></i><i></i>
+                <span class="browser__url">kara.huyhieu.online</span>
+              </div>
+              <div class="browser__screen">
+                <img src="assets/img/kara-song.webp" alt="HATZ main screen playing karaoke" width="1800" height="1003" loading="lazy" data-zoom>
+              </div>
+            </div>
+
+            <div class="phone phone--hatz" data-tilt>
+              <div class="phone__screen screen-swap" id="hatz-screen">
+                <img src="assets/img/kara-control.webp" alt="Phone remote control" width="720" height="1365" loading="lazy" class="is-active" data-zoom>
+                <img src="assets/img/kara-ai1.webp" alt="Karaoke AI assistant" width="720" height="1365" loading="lazy" data-zoom>
+                <img src="assets/img/kara-ai2.webp" alt="AI song suggestions" width="720" height="1365" loading="lazy" data-zoom>
+                <img src="assets/img/kara-select.webp" alt="Song search" width="720" height="1365" loading="lazy" data-zoom>
+              </div>
+            </div>
+
+            <div class="tabs" role="tablist" aria-label="HATZ" data-target="hatz-screen">
+              <button role="tab" aria-selected="true" data-i18n="p2.s3b">Control</button>
+              <button role="tab" aria-selected="false" data-i18n="p2.t2">AI assistant</button>
+              <button role="tab" aria-selected="false" data-i18n="p2.t3">Suggestions</button>
+              <button role="tab" aria-selected="false" data-i18n="p2.t4">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCT 03 — NEKOGO ============ -->
+    <section class="section product" id="p-nekogo" data-scene="blush">
+      <div class="neko-stones" aria-hidden="true">
+        <span class="stone stone--b" style="--x:5%;--y:16%;--s:64px;--d:0s"></span>
+        <span class="stone stone--w" style="--x:90%;--y:10%;--s:48px;--d:-2s"></span>
+        <span class="stone stone--w" style="--x:10%;--y:84%;--s:40px;--d:-4s"></span>
+        <span class="stone stone--b" style="--x:93%;--y:78%;--s:56px;--d:-1s"></span>
+      </div>
+      <div class="container">
+        <header class="product__head">
+          <span class="product__num" aria-hidden="true">03</span>
+          <div>
+            <p class="product__cat reveal" data-i18n="p3.cat">Education · Game</p>
+            <h2 class="product__name reveal">NekoGo <span class="emoji" aria-hidden="true">🐱</span></h2>
+            <p class="product__tagline reveal" data-i18n="p3.tagline">Learn Go with a bunch of cats.</p>
+          </div>
+        </header>
+
+        <div class="product__grid">
+          <div class="product__info">
+            <p class="product__desc reveal" data-i18n="p3.desc">Go is an ancient, deep game — but it doesn't have to be dry. NekoGo turns every stone into a cat and every tricky concept into a small, visual, adorable lesson.</p>
+
+            <ul class="features reveal">
+              <li><b data-i18n="p3.f1b">Learn</b><span data-i18n="p3.f1s">16 lessons from basics to advanced</span></li>
+              <li><b data-i18n="p3.f2b">2-player mode</b><span data-i18n="p3.f2s">Play head-to-head on one device</span></li>
+              <li><b data-i18n="p3.f3b">Black &amp; white cats</b><span data-i18n="p3.f3s">Lively stones on an easy-on-the-eyes board</span></li>
+              <li><b data-i18n="p3.f4b">Online play</b><span data-i18n="p3.f4s">Coming soon</span></li>
+            </ul>
+
+            <div class="ai-box reveal">
+              <p class="ai-box__label"><span class="spark">✦</span> <span data-i18n="p3.ai.label">AI inside — <b>a patient teacher</b></span></p>
+              <p class="ai-box__text" data-i18n="p3.ai.text">AI is used in teaching, guiding learners through every chapter:</p>
+              <ul class="prompts prompts--plain">
+                <li data-i18n="p3.c1">Basic rules</li>
+                <li data-i18n="p3.c2">Life and death</li>
+                <li data-i18n="p3.c3">Capturing techniques</li>
+                <li data-i18n="p3.c4">Basic strategy</li>
+              </ul>
+            </div>
+
+            <a href="https://nekogo.huyhieu.online/" target="_blank" rel="noopener" class="btn btn--accent reveal" data-magnetic>
+              <span data-i18n="btn.try">Try it at</span> nekogo.huyhieu.online <span class="btn__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="product__visual product__visual--neko reveal">
+            <span class="float-tag float-tag--tr tag tag--yellow" aria-hidden="true" data-i18n="p3.float">Too cute 😻</span>
+            <div class="phone phone--fan phone--l" data-tilt>
+              <div class="phone__screen"><img src="assets/img/nekogo-lesson.webp" alt="Capturing lesson with cat stones" width="720" height="1474" loading="lazy" data-zoom></div>
+            </div>
+            <div class="phone phone--fan phone--c" data-tilt>
+              <div class="phone__screen"><img src="assets/img/nekogo-welcome.webp" alt="NekoGo welcome screen" width="720" height="1431" loading="lazy" data-zoom></div>
+            </div>
+            <div class="phone phone--fan phone--r" data-tilt>
+              <div class="phone__screen"><img src="assets/img/nekogo-play.webp" alt="A game between Black Cat and White Cat" width="720" height="1381" loading="lazy" data-zoom></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="section process" id="process" data-scene="paper">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label reveal"><b>04</b><span data-i18n="process.label">Process</span></div>
+          <h2 class="display reveal" data-i18n="process.title">From idea to <em>a product that ships.</em></h2>
+        </div>
+
+        <ol class="process__list">
+          <li class="reveal">
+            <span class="process__no process__no--yellow">1</span>
+            <h3 data-i18n="process.1t">Listen</h3>
+            <p data-i18n="process.1p">Understand the problem, the users and the data you have. Find where AI truly makes a difference.</p>
+          </li>
+          <li class="reveal">
+            <span class="process__no process__no--mint">2</span>
+            <h3 data-i18n="process.2t">Design</h3>
+            <p data-i18n="process.2p">Sketch the experience, conversation flows and system architecture. Agree on a clear scope.</p>
+          </li>
+          <li class="reveal">
+            <span class="process__no process__no--lilac">3</span>
+            <h3 data-i18n="process.3t">Build &amp; integrate</h3>
+            <p data-i18n="process.3p">Develop in short iterations, with early working builds you can try and give feedback on.</p>
+          </li>
+          <li class="reveal">
+            <span class="process__no process__no--coral">4</span>
+            <h3 data-i18n="process.4t">Run &amp; optimise</h3>
+            <p data-i18n="process.4p">Deploy, monitor the quality of AI answers and optimise costs over time.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" data-scene="pop">
+      <svg class="contact__star" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 2l9 25 26-9-13 24 24 13-27 4 4 27-23-15-23 15 4-27-27-4 24-13-13-24 26 9z" fill="#FFD23F" stroke="#15131A" stroke-width="3" stroke-linejoin="round"/></svg>
+      <div class="container">
+        <div class="section-label reveal"><b>05</b><span data-i18n="contact.label">Contact</span></div>
+        <h2 class="contact__title reveal" data-i18n="contact.title">Got an idea?<br><em>Let's talk!</em></h2>
+
+        <div class="contact__grid">
+          <div class="contact__info">
+            <a href="mailto:contact@huyhieu.online" class="contact__email reveal" data-magnetic>
+              contact@huyhieu.online <span aria-hidden="true">↗</span>
+            </a>
+
+            <dl class="contact__list reveal">
+              <div>
+                <dt data-i18n="contact.phone">Phone</dt>
+                <dd><a href="tel:+84365965931">0365 965 931</a></dd>
+              </div>
+              <div>
+                <dt data-i18n="contact.address">Address</dt>
+                <dd>
+                  <a href="https://www.google.com/maps/search/?api=1&amp;query=263+Ph%C3%BAc+Di%E1%BB%85n%2C+Xu%C3%A2n+Ph%C6%B0%C6%A1ng%2C+H%C3%A0+N%E1%BB%99i" target="_blank" rel="noopener">263 Phúc Diễn, Xuân Phương, Hà Nội</a>
+                </dd>
+              </div>
+              <div>
+                <dt data-i18n="contact.field">Focus</dt>
+                <dd data-i18n="contact.fieldv">AI integration solutions · AI-powered projects</dd>
+              </div>
+            </dl>
+
+            <div class="map reveal">
+              <iframe
+                title="Map: 263 Phúc Diễn, Xuân Phương, Hà Nội"
+                src="https://maps.google.com/maps?q=263%20Ph%C3%BAc%20Di%E1%BB%85n%2C%20Xu%C3%A2n%20Ph%C6%B0%C6%A1ng%2C%20H%C3%A0%20N%E1%BB%99i&amp;z=15&amp;output=embed"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <form class="form reveal" id="contact-form" novalidate>
+            <p class="form__intro" data-i18n="form.intro">Tell us about your project — we'll get back to you by email. 👋</p>
+            <div class="field">
+              <input id="f-name" name="name" type="text" placeholder=" " autocomplete="name" required>
+              <label for="f-name" data-i18n="form.name">Full name</label>
+            </div>
+            <div class="field">
+              <input id="f-email" name="email" type="email" placeholder=" " autocomplete="email" required>
+              <label for="f-email">Email</label>
+            </div>
+            <fieldset class="chips">
+              <legend data-i18n="form.interest">You're interested in</legend>
+              <label><input type="checkbox" name="topic" value="Tích hợp AI"><span data-i18n="form.c1">AI integration</span></label>
+              <label><input type="checkbox" name="topic" value="Sản phẩm AI mới"><span data-i18n="form.c2">New AI product</span></label>
+              <label><input type="checkbox" name="topic" value="Chatbot / Agent"><span>Chatbot / Agent</span></label>
+              <label><input type="checkbox" name="topic" value="Tư vấn"><span data-i18n="form.c4">Consulting</span></label>
+            </fieldset>
+            <div class="field">
+              <textarea id="f-msg" name="message" rows="4" placeholder=" " required></textarea>
+              <label for="f-msg" data-i18n="form.msg">A short description of your idea</label>
+            </div>
+            <button type="submit" class="btn btn--yellow btn--block" data-magnetic><span data-i18n="form.submit">Send message</span> <span class="btn__arrow" aria-hidden="true">→</span></button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" data-scene="pop">
+    <div class="container">
+      <div class="footer__big" aria-hidden="true">HH Labs<span>✦</span></div>
+      <div class="footer__row">
+        <p>© <span id="year">2026</span> HH Labs. <span data-i18n="footer.copy">AI integration solutions &amp; AI-powered projects.</span></p>
+        <nav aria-label="Products">
+          <a href="https://caulong.huyhieu.online" target="_blank" rel="noopener" data-i18n="p1.name">Badminton Fund</a>
+          <a href="https://kara.huyhieu.online" target="_blank" rel="noopener">HATZ Karaoke</a>
+          <a href="https://nekogo.huyhieu.online/" target="_blank" rel="noopener">NekoGo</a>
+        </nav>
+        <a href="#top" class="to-top"><span data-i18n="footer.top">Back to top</span> ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Image">
+    <button class="lightbox__close" data-i18n-aria="aria.close" aria-label="Close">✕</button>
+    <img alt="">
+    <p class="lightbox__cap"></p>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
