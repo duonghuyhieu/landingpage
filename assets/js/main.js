@@ -479,9 +479,6 @@
   root.classList.remove('lang-pending');
   syncThemeColor();
 
-  const year = $('#year');
-  if (year) year.textContent = new Date().getFullYear();
-
   const markLoaded = () => requestAnimationFrame(() => body.classList.add('is-loaded'));
   if (document.fonts && document.fonts.ready) {
     Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 1000))]).then(markLoaded);
