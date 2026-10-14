@@ -212,6 +212,33 @@
   });
 
   /* =========================================================
+     Usage metrics — count up when they scroll into view
+     (the final value is already in the HTML for no-JS / crawlers)
+     ========================================================= */
+  const counters = $$('[data-count]');
+  if (counters.length && !reduceMotion) {
+    const render = (el, v) => { el.textContent = `${el.dataset.prefix || ''}${v}${el.dataset.suffix || ''}`; };
+    const countUp = el => {
+      const target = parseInt(el.dataset.count, 10) || 0;
+      const dur = 1400, t0 = performance.now();
+      const step = now => {
+        const p = Math.min(1, (now - t0) / dur);
+        render(el, Math.round(target * (1 - Math.pow(1 - p, 3))));
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    const countObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        countUp(entry.target);
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(el => { render(el, 0); countObserver.observe(el); });
+  }
+
+  /* =========================================================
      Manifesto — words light up as you scroll
      (re-split whenever the language changes)
      ========================================================= */

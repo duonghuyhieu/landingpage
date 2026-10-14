@@ -186,7 +186,10 @@ window.HH_I18N = {
    "aria.lang": "Choose language",
    "aria.theme": "Toggle light / dark theme",
    "aria.menu": "Open menu",
-   "aria.close": "Close"
+   "aria.close": "Close",
+   "metric.dau": "daily users",
+   "metric.mau": "monthly users",
+   "metric.total": "people have used it"
   },
   "vi": {
    "skip": "Bỏ qua tới nội dung",
@@ -340,7 +343,10 @@ window.HH_I18N = {
    "aria.lang": "Chọn ngôn ngữ",
    "aria.theme": "Đổi giao diện sáng / tối",
    "aria.menu": "Mở menu",
-   "aria.close": "Đóng"
+   "aria.close": "Đóng",
+   "metric.dau": "người dùng mỗi ngày",
+   "metric.mau": "người dùng mỗi tháng",
+   "metric.total": "người đã sử dụng"
   },
   "ja": {
    "skip": "本文へスキップ",
@@ -494,7 +500,10 @@ window.HH_I18N = {
    "aria.lang": "言語を選択",
    "aria.theme": "ライト／ダークテーマを切り替え",
    "aria.menu": "メニューを開く",
-   "aria.close": "閉じる"
+   "aria.close": "閉じる",
+   "metric.dau": "1日のユーザー",
+   "metric.mau": "月間ユーザー",
+   "metric.total": "累計ユーザー"
   },
   "ko": {
    "skip": "본문으로 건너뛰기",
@@ -648,7 +657,10 @@ window.HH_I18N = {
    "aria.lang": "언어 선택",
    "aria.theme": "라이트/다크 테마 전환",
    "aria.menu": "메뉴 열기",
-   "aria.close": "닫기"
+   "aria.close": "닫기",
+   "metric.dau": "일일 사용자",
+   "metric.mau": "월간 사용자",
+   "metric.total": "누적 사용자"
   },
   "zh": {
    "skip": "跳到正文",
@@ -802,7 +814,10 @@ window.HH_I18N = {
    "aria.lang": "选择语言",
    "aria.theme": "切换浅色/深色主题",
    "aria.menu": "打开菜单",
-   "aria.close": "关闭"
+   "aria.close": "关闭",
+   "metric.dau": "日活跃用户",
+   "metric.mau": "月活跃用户",
+   "metric.total": "累计用户"
   }
  }
 };

@@ -502,6 +502,21 @@ html:not(.js) .hero__title .line > span { opacity: 1; transform: none; }
 .features b { font-family: var(--f-display); font-weight: 800; font-size: 1rem; }
 .features span { color: var(--muted); line-height: 1.4; }
 
+.metrics { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: .7rem; }
+.metrics li {
+  display: flex; flex-direction: column; gap: .3rem; padding: 1rem 1.1rem; border-radius: 18px;
+  background: var(--card); border: 2px solid var(--edge); box-shadow: 4px 4px 0 var(--edge);
+  transition: transform .4s var(--spring);
+}
+.metrics li:nth-child(2) { rotate: -1deg; }
+.metrics li:hover { transform: translateY(-3px) rotate(-1.5deg); }
+.metrics b {
+  font-family: "Bricolage Grotesque", var(--f-display); font-weight: 800; font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1; letter-spacing: -.03em; color: var(--accent); font-variant-numeric: tabular-nums;
+}
+.metrics span { font-size: .8rem; font-weight: 500; line-height: 1.4; color: var(--muted); }
+#p-hatz .metrics li { border-color: rgba(233, 238, 255, .25); box-shadow: 4px 4px 0 rgba(62, 198, 255, .35); }
+
 .ai-box {
   position: relative; padding: 1.4rem 1.5rem; border-radius: var(--radius); overflow: hidden;
   background: var(--card); border: 2px solid var(--edge); box-shadow: 5px 5px 0 var(--edge);
@@ -799,6 +814,10 @@ body:not([data-scene="blush"]) .neko-stones { opacity: 0; }
   .product-index i { display: none; }
   .product__head { flex-direction: column; align-items: flex-start; gap: .6rem; }
   .features { grid-template-columns: 1fr; }
+  .metrics { gap: .5rem; }
+  .metrics li { padding: .8rem .75rem; }
+  .metrics b { font-size: 1.55rem; }
+  .metrics span { font-size: .72rem; line-height: 1.45; }
   .steps { grid-template-columns: 1fr; }
   .chat-float { position: relative; left: auto; bottom: auto; width: 46%; margin: -14% 0 0 2%; }
   .tabs { justify-content: flex-start; }
